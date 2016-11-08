@@ -23,6 +23,14 @@ body {
     background-position-y:25%;
     border: 10px solid;
     border-color: whitesmoke;
+    
+    -webkit-transition: 1s cubic-bezier(.68,-.55,.265,1.55); /* Safari */
+     transition: 0.5s cubic-bezier(.68,-.55,.265,1.55);
+}
+
+.circle-image:hover{
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
 }
 
 .jumbotron{
@@ -158,6 +166,8 @@ p {
     text-align: justify;
     text-justify: inter-word;
     text-indent: 40px;
+    padding: 0px 30px;
+    margin-bottom: 0px;
 }
 
 blockquote {
@@ -178,6 +188,18 @@ blockquote:before {
 blockquote p {
   display: inline;
   font-style: italic;
+}
+
+figure{
+    text-align: center;
+}
+
+figure figcaption{
+    margin: 15px;
+}
+
+ol, ul{
+     margin: 20px 60px;
 }
 
 .glyphicon-lg{font-size:3em}
