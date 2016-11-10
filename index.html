@@ -1,283 +1,323 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <title>RxJava Documentation</title>
-  <meta name="generator" content="Bootply" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!--[if lt IE 9]>
-  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-  <link href="css/styles.css" rel="stylesheet">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
-    
+    <!DOCTYPE html>
+        <html lang="en">
+    <head>
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <title>RxJava Documentation</title>
+      <meta name="generator" content="Bootply" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto:700' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+      <link href="css/styles.css" rel="stylesheet">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/default.min.css">
 
-</head>
-<body>
 
-<div id="masthead">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8 col-md-offset-4 jumbotron" style="text-align:center">
-        <img width="400" height="auto" src="./img/rxJava.png">
-          <h2>MSc Software Engineering, FEUP</h2>
-          <h4>Software Architecture and Design</h4>
-        <small>
-          <a href="https://github.com/RitaFEUP">Ana Rita Silva</a>,
-          <a href="https://github.com/mzamith">Manuel Zamith</a> and
-          <a href="https://github.com/ngmatos">Nuno Barros</a>
-        </small>
-        <h4>2016</h4>
-      </div>
-    </div>
-  </div><!--/container-->
-</div><!--/masthead-->
+    </head>
+    <body>
 
-<!--main-->
-<div class="container-fluid">
-  <div class="row">
-    <!--left-->
-    <div class="col-md-3" id="leftCol">
-      <img src="https://pbs.twimg.com/profile_images/203619862/06_400x400.gif"
-           class="img-responsive circle-image">
+    <div id="masthead">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-4 jumbotron" style="text-align:center">
+            <img width="400" height="auto" src="./img/rxJava.png">
+              <h2>MSc Software Engineering, FEUP</h2>
+              <h4>Software Architecture and Design</h4>
+            <small>
+              <a href="https://github.com/RitaFEUP">Ana Rita Silva</a>,
+              <a href="https://github.com/mzamith">Manuel Zamith</a> and
+              <a href="https://github.com/ngmatos">Nuno Barros</a>
+            </small>
+            <h4>2016</h4>
+          </div>
+        </div>
+      </div><!--/container-->
+    </div><!--/masthead-->
 
-      <ul class="nav nav" id="sidebar">
-        <li class="tree">
-          <a class="tree-toggle" href="javascript:;">Introduction <span class="caret"></span></a>
-          <ul class="nav tree">
-            <li><a href="#sec0">General Description</a></li>
-            <li><a href="#sec0">Package Organization</a></li>
+    <!--main-->
+    <div class="container-fluid">
+      <div class="row">
+        <!--left-->
+        <div class="col-md-3" id="leftCol">
+          <img src="https://pbs.twimg.com/profile_images/203619862/06_400x400.gif"
+               class="img-responsive circle-image">
+
+          <ul class="nav nav" id="sidebar">
+            <li class="tree">
+              <a class="tree-toggle" href="javascript:;">Introduction <span class="caret"></span></a>
+              <ul class="nav tree">
+                <li><a href="#sec0">General Description</a></li>
+                <li><a href="#sec0">Package Organization</a></li>
+              </ul>
+            </li>
+            <li class="tree">
+              <a class="tree-toggle" href="javascript:;">Architectural Style <span class="caret"></span></a>
+
+              <ul class="nav tree">
+                <li><a href="#sec11">Event-Based Systems</a></li>
+                <li><a href="#sec12">Filling in the Black</a></li>
+                <li><a href="#sec13">Code Example</a></li>
+              </ul>
+            </li>
+            <li class="tree">
+              <a class="tree-toggle" href="javascript:;">Design Patterns <span class="caret"></span></a>
+              <ul class="nav tree">
+                <li><a href="#sec2">Subtitle</a></li>
+                <li><a href="#sec2">Package Organization</a></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li class="tree">
-          <a class="tree-toggle" href="javascript:;">Architectural Style <span class="caret"></span></a>
-          
-          <ul class="nav tree">
-            <li><a href="#sec11">Event-Based Systems</a></li>
-            <li><a href="#sec12">Filling in the Black</a></li>
-            <li><a href="#sec13">Code Example</a></li>
-          </ul>
-        </li>
-        <li class="tree">
-          <a class="tree-toggle" href="javascript:;">Design Patterns <span class="caret"></span></a>
-          <ul class="nav tree">
-            <li><a href="#sec2">Subtitle</a></li>
-            <li><a href="#sec2">Package Organization</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!--/left-->
+        </div><!--/left-->
 
-    <!--right-->
-    <div class="col-md-9 col-md-offset-3">
-        
-        <blockquote>
-         <p>ReactiveX is a library for composing asynchronous and event-based programs by using observable sequences.
-             <br>RxJava is a Java VM implementation of ReactiveX (Reactive Extensions)</p>
-        </blockquote>
-      <h1 id="sec0">Introduction</h1>
-      <hr>
-      <p>This project was made under a college domain (Software Arquitecture), and we want achieve some goals like:</p>
-      <ul>
-        <li>4+1 Architectural view model</li>
-        <li>Logical view</li>
-        <li>Development view</li>
-        <li>Process view</li>
-        <li>Physical view</li>
-        <li>Scenarios</li>
-      </ul>
-      <p>Our introduction chapter, will be divided under two sub-sections, an user and developer introductory view:</p>
+        <!--right-->
+        <div class="col-md-9 col-md-offset-3">
+
+            <blockquote>
+             <p>ReactiveX is a library for composing asynchronous and event-based programs by using observable sequences.
+                 <br>RxJava is a Java VM implementation of ReactiveX (Reactive Extensions)</p>
+            </blockquote>
+          <h1 id="sec0">Introduction</h1>
+              <hr>
+
+          <p>Software have changed dramatically in recent years. Only a few years ago a large application had tens of servers, seconds of response time, hours of offline maintenance and gigabytes of data.
+    Nowadays, systems built as Reactive Systems are more flexible, loosely-coupled and scalable.
+    This makes them easier to develop, liable to change and significantly more tolerant to failure.
+    Reactive Systems are highly responsive, giving users effective interactive feedback.</p>
+    <p>Back to the very beginning, what is reactive programming? Is programming with asynchronous data streams.</p>
+    <p>What do we mean with "stream"? A sequence of ongoing events ordered in time: it can emit three different things: 
+    a value (of some type), an error, or a "completed" signal.</p>
+    <p>These emitted events can only be captured asynchronously, by defining a function that will execute when a value is emitted, 
+    another function when an error is emitted, and another function when 'completed' is emitted - observers! 
+    The "listening" to the stream is called subscribing.</p>
+    <p>The stream is the subject/observable being observed (Observer Design Pattern).</p>
+
+    <p>In RxJava an object that implements the Observer interface subscribes to an object of the Observable class. 
+    Then that subscriber reacts to whatever item or sequence of items the Observable object emits.</p>
+    <p>This pattern facilitates concurrent operations because it does not need to block while waiting for the Observable to emit objects, 
+    but instead it creates a sentry in the form of a subscriber that stands ready to react appropriately at whatever future time the Observable does so.</p>
+
+            <p>According to <a href="http://reactivex.io/documentation/contract.html">The Observable Contract,</a>
+            <b> an Observable communicates with its observers</b> with the following notifications:</p>
+            <ul>
+            <li>OnNext() - transmits an item that is emitted by the Observable to the observer.</li>
+            <li>OnCompleted() - indicates that the Observable has completed successfully and that it will be emitting no further items.</li>
+            <li>OnError() - indicates that the Observable has terminated with a specified error condition and that it will be emitting no further items.</li>
+            <li>OnSubscribe() (optional) - indicates that the Observable is ready to accept Request notifications from the observer.</li>
+            </ul>
+    <p>In reverse, <b>an observer communicates with its Observable</b> by means of the following notifications:</p>
+            <ul>
+                <li>Subscribe - indicates that the observer is ready to receive notifications from the Observable.</li>
+                <li>Unsubscribe - indicates that the observer no longer wants to receive notifications from the Observable.</li>
+                <li>Request (optional) - indicates the number of additional OnNext() notifications that the observer wants from the Observable.</li>
+            </ul>       
+
+    <p>Reactive programming allows the developer to create asynchronous applications and based on a simplified form events.
+    Apps nowadays have an abundance of real-time events of every kind that enable a highly interactive experience to the user. We need tools for properly dealing with that, and Reactive Programming is an answer.</p>
+
+            <h2 id="sec01">Package overview of RxJava</h2>
 
 
-      <h2 id="sec1">Architectural Style</h2><hr>
-        <h3 id="sec11">Event Based Systems</h3>
-        <hr>
-        <p>You can't talk about Reactive Extensions without talking about Event-based  systems.</p>
-        <p>In an event-based system, individual components announce data which they wish to share with others. These other components may declare interest in this data feed. This is commonly called the Publish-Subscribe pattern (Pub-sub).</p>
-        <p>This is exactly what happens when you implement with reactive extensions. In this case, our publisher (the one who emits data), is called the <code>Observable</code>, while the subscriber can be called the <code>Observer</code>, or <code>Subscriber</code>. </p>
-        
-        
-        <h3 id="sec12">Filling in the Blank</h3>
-        <hr>
-        <p>Whether you call this a <strong>Publish-subscribe</strong> pattern or the <strong>Observer</strong> pattern is debaeable. Actually, one can be considered a concrete implementation of the other. So, to get a little deeper into the implementation of RXJava, let's talk a little bit about the GoF Observer pattern:</p> 
-        
+            <hr>
+
+            <p>The following diagram gives an overview of the most important packages of RxJava and what are their main functionalities:</p>        
+    <!--<object data="RxJava.pdf" type="application/pdf" width="300" height="400">
+    <a href="RxJava.pdf">test.pdf</a>
+    </object>-->
         <figure>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png" alt="Observer Patter">
-          <figcaption>Fig1. - Diagram of the GoF observer pattern.</figcaption>
+        <img src="./RxJava_image.png" alt="RxJava" width="900" height="850">
+        <figcaption>Figure x - Diagram illustrating some important packages of RxJava.</figcaption>
         </figure>
-        
-        <p>The <i>Gang of Four</i> observer pattern describes the behavior of an object, called the Subject, which maintains a collection of dependents, called Observers. The subject is able to notify the observer automatically of any change of states that may occur, usually by calling one of their methods.</p>
-        <p>Reactive Extensions extend the observer pattern, modernizing it to handle asynchronous behavior, as well as streams of data and/or events, instead of just a simple scalar callback.</p>
-        <p>The Observable type adds two missing semantics to the GoF observer pattern:</p>
-        <ol>
-            <li>The ability for the producer to signal to the consumer that there is no more data available (a for-each loop on an Iterable completes and returns normally in such a case; an Observable calls its observer’s onCompleted() method)</li>
-            <li>The ability for the producer to signal to the consumer that an error has occurred (an Iterable throws an exception if an error takes place during iteration; an Observable calls its observer’s onError() method)</li>
-        </ol>
-       <p> In a brief way, Observables fill the gap by being the ideal way to access asynchronous sequences of multiple items.</p><p>
-        A reactive Observable can be compared to a simple <code>Iterator</code>, which is used every day by programmers all around the world, experienced or not.</p><p>
-        The dual of a pull-based Iterator is a push-based Observable. The same way that you would <code>next()</code> on an Iterable, you <code>onNext()</code> on an Observable. The two of them can be thought about the same way for simplicity, however, the Observable is asynchronous, and it pushes the data on to its subscribers. This is how Reactive took care of the multiple item problem.</p><p>
-        This is the way Reactive Extensions harmonize the Iterable and Observable types for handling streams of data. What about asynchronous behavior?</p><p>
-        For asynchronicity, the JVM offers the <code>Future</code> interface, since Java 5.</p><p>
-        Future objects promise to hold the result of something that (maybe) hasn't occurred yet.</p><p>
-        RX’s main advantage over futures is that RxJava works on streams of zero or more items including never-ending streams with an infinite number of items. It can do so asynchronously and with little or no thread blocking. Futures, on the other hand, are single use. Each Future holds a single result and that's it.</p>
-        <p>The following table sums up how Observebles fit in the mix.</p>
-        
-        <table class="table table-responsive table-hover">
-            <caption>Table 1. Observables, Iterables and Futures</caption>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Single Items</th>
-              <th>Multiple Items</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Synchronous</th>
-              <td><code>T getData()</code></td>
-              <td><code>Iterable&lt;T&gt; getData()</code></td>
-            </tr>
-            <tr>
-              <th scope="row">Asynchronous</th>
-              <td><code>Future&lt;T&gt; getData()</code></td>
-              <td><code>Observable&lt;T&gt; getData()</code></td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <h3 id="sec13">Code Example</h3>
-        <hr>
-        
-        <p>To achieve better understanding, lets look ate a code example. a simple implementation of RXJava:</p>
-        <pre><code class="java">
-            import java.util.Arrays;
-            import java.util.List;
 
-            import rx.Observable;
+    <!---------------------OTHER SECTION--------------------->
 
-            public class RxJavaExample {
-                    public static void main(String[] args) {
-                        
-                        //create a list
-                        List&lt;String&gt; list = Arrays.asList("Android", "Ubuntu", "Mac OS");
-                        
-                        //Create an Observable
-                        Observable&lt;List&lt;String&gt;&gt; listObservable = Observable.just(list);  
-                        
-                        //Register an Observer
-                        listObservable.subscribe(new Observer&lt;List&gt;String() }                          
+          <h2 id="sec1">Architectural Style</h2><hr>
+            <h3 id="sec11">Event Based Systems</h3>
+            <hr>
+            <p>You can't talk about Reactive Extensions without talking about Event-based  systems.</p>
+            <p>In an event-based system, individual components announce data which they wish to share with others. These other components may declare interest in this data feed. This is commonly called the Publish-Subscribe pattern (Pub-sub).</p>
+            <p>This is exactly what happens when you implement with reactive extensions. In this case, our publisher (the one who emits data), is called the <code>Observable</code>, while the subscriber can be called the <code>Observer</code>, or <code>Subscriber</code>. </p>
 
-                        @Override
-                        public void onCompleted() {}
 
-                        @Override
-                        public void onError(Throwable e) {}
+            <h3 id="sec12">Filling in the Blank</h3>
+            <hr>
+            <p>Whether you call this a <strong>Publish-subscribe</strong> pattern or the <strong>Observer</strong> pattern is debaeable. Actually, one can be considered a concrete implementation of the other. So, to get a little deeper into the implementation of RXJava, let's talk a little bit about the GoF Observer pattern:</p> 
 
-                        @Override
-                        public void onNext(List&lt;String&gt; list) {
-                                            System.out.println(list);
+            <figure>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Observer.svg/500px-Observer.svg.png" alt="Observer Patter">
+              <figcaption>Fig1. - Diagram of the GoF observer pattern.</figcaption>
+            </figure>
+
+            <p>The <i>Gang of Four</i> observer pattern describes the behavior of an object, called the Subject, which maintains a collection of dependents, called Observers. The subject is able to notify the observer automatically of any change of states that may occur, usually by calling one of their methods.</p>
+            <p>Reactive Extensions extend the observer pattern, modernizing it to handle asynchronous behavior, as well as streams of data and/or events, instead of just a simple scalar callback.</p>
+            <p>The Observable type adds two missing semantics to the GoF observer pattern:</p>
+            <ol>
+                <li>The ability for the producer to signal to the consumer that there is no more data available (a for-each loop on an Iterable completes and returns normally in such a case; an Observable calls its observer’s onCompleted() method)</li>
+                <li>The ability for the producer to signal to the consumer that an error has occurred (an Iterable throws an exception if an error takes place during iteration; an Observable calls its observer’s onError() method)</li>
+            </ol>
+           <p> In a brief way, Observables fill the gap by being the ideal way to access asynchronous sequences of multiple items.</p><p>
+            A reactive Observable can be compared to a simple <code>Iterator</code>, which is used every day by programmers all around the world, experienced or not.</p><p>
+            The dual of a pull-based Iterator is a push-based Observable. The same way that you would <code>next()</code> on an Iterable, you <code>onNext()</code> on an Observable. The two of them can be thought about the same way for simplicity, however, the Observable is asynchronous, and it pushes the data on to its subscribers. This is how Reactive took care of the multiple item problem.</p><p>
+            This is the way Reactive Extensions harmonize the Iterable and Observable types for handling streams of data. What about asynchronous behavior?</p><p>
+            For asynchronicity, the JVM offers the <code>Future</code> interface, since Java 5.</p><p>
+            Future objects promise to hold the result of something that (maybe) hasn't occurred yet.</p><p>
+            RX’s main advantage over futures is that RxJava works on streams of zero or more items including never-ending streams with an infinite number of items. It can do so asynchronously and with little or no thread blocking. Futures, on the other hand, are single use. Each Future holds a single result and that's it.</p>
+            <p>The following table sums up how Observebles fit in the mix.</p>
+
+            <table class="table table-responsive table-hover">
+                <caption>Table 1. Observables, Iterables and Futures</caption>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Single Items</th>
+                  <th>Multiple Items</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Synchronous</th>
+                  <td><code>T getData()</code></td>
+                  <td><code>Iterable&lt;T&gt; getData()</code></td>
+                </tr>
+                <tr>
+                  <th scope="row">Asynchronous</th>
+                  <td><code>Future&lt;T&gt; getData()</code></td>
+                  <td><code>Observable&lt;T&gt; getData()</code></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3 id="sec13">Code Example</h3>
+            <hr>
+
+            <p>To achieve better understanding, lets look ate a code example. a simple implementation of RXJava:</p>
+            <pre><code class="java">
+                import java.util.Arrays;
+                import java.util.List;
+
+                import rx.Observable;
+
+                public class RxJavaExample {
+                        public static void main(String[] args) {
+
+                            //create a list
+                            List&lt;String&gt; list = Arrays.asList("Android", "Ubuntu", "Mac OS");
+
+                            //Create an Observable
+                            Observable&lt;List&lt;String&gt;&gt; listObservable = Observable.just(list);  
+
+                            //Register an Observer
+                            listObservable.subscribe(new Observer&lt;List&gt;String() }                          
+
+                            @Override
+                            public void onCompleted() {}
+
+                            @Override
+                            public void onError(Throwable e) {}
+
+                            @Override
+                            public void onNext(List&lt;String&gt; list) {
+                                                System.out.println(list);
+                            }
+                        });
                         }
-                    });
-                    }
-            }
-        </code></pre>
-
-      
-      <h3 sec="sec14">Domain Diagram</h3>
-      <hr>
-      <div class="row">
-        <div class="col-md-9">
-          <figure>
-            <img src="./img/DomainDiagramRxJava.png" alt="Domain Diagram Rx">
-            <figcaption>FigX. - Domain Diagram of RxJava</figcaption>
-          </figure>
-        </div>
-
-      </div>
+                }
+            </code></pre>
 
 
-      <h2 id="sec2">Design Patterns</h2>
-      <hr>
-      <div class="row">
-        <div class="col-md-9">
-          <p>Based on the <i>Gang of Four</i> design patterns, we managed to find some of them used in RxJava. Starting with the most common pattern, in our opinion, we're describing the <b>Strategy Pattern.</b></p>
-          <ul>
-            <li>In RxJava:</li>
-            <figure>
-              <img src="./img/StrategyRxJava.png" alt="Strategy Pattern Rx">
-              <figcaption>FigX. - Diagram of Strategy Pattern in RxJava.</figcaption>
-            </figure>
-            <li>In <i>GoF:</i></li>
-            <figure>
-              <img src="./img/StrategyGofRxJava.png" alt="Strategy Pattern GoF">
-              <figcaption>FigX. - Diagram of Strategy Pattern by <i>GoF</i></figcaption>
-            </figure>
-          </ul>
-          <br>
-          <p>As for <b>Template Pattern</b>:</p>
-          <ul>
-            <li>In RxJava:</li>
-            <figure>
-              <img src="./img/TemplateRxJava.png" alt="Template Pattern Rx">
-              <figcaption>FigX. - Diagram of Template Pattern in RxJava</figcaption>
-            </figure>
-            <li>In <i>GoF:</i></li>
-             <figure>
-             <img src="./img/TemplateGoFRxJava.png" alt="Template Pattern GoF">
-              <figcaption>FigX. - Diagram of Template Pattern by <i>GoF</i></figcaption>
-             </figure>
-          </ul>
-          <p>As for <b>Singleton Pattern</b>:</p>
-          <ul>
-            <li>In RxJava:</li>
-            <figure>
-              <img src="./img/SingletonPatternRxJava.png" alt="Singleton Pattern Rx">
-              <figcaption>FigX. - Diagram of Singleton Pattern in RxJava</figcaption>
-            </figure>
-            <li>In <i>GoF:</i></li>
-             <figure>
-             <img src="./img/SingletonGofRxJava.png" alt="Template Pattern GoF">
-              <figcaption>FigX. - Diagram of Singleton Pattern by <i>GoF</i></figcaption>
-             </figure>
-          </ul>
-          <p>As for <b>Factory Pattern</b>:</p>
-          <p>We surmise this is a slightly different implementation of Factory Pattern though we think the concept is the same, thus making us believe this could represent a Factory Pattern.</p>
-          <ul>
-            <li>In RxJava:</li>
-            <figure>
-              <img style="" src="./img/FactoryPatternRxJava.png" alt="Factory Pattern Rx">
-              <figcaption>FigX. - Diagram of Factory Pattern in RxJava</figcaption>
-            </figure>
-            <li>In <i>GoF:</i></li>
-             <figure>
-              <img src="./img/FactoryMethodGofRxJava.png" alt="Template Pattern GoF">
-              <figcaption>FigX. - Diagram of Factory Pattern by <i>GoF</i></figcaption>
-             </figure>
-          </ul>
-        </div>
-      
-      </div>
-    </div><!--/right-->
-  </div><!--/row-->
-</div><!--/container-->
+          <h3 sec="sec14">Domain Diagram</h3>
+          <hr>
+          <div class="row">
+            <div class="col-md-9">
+              <figure>
+                <img src="./img/DomainDiagramRxJava.png" alt="Domain Diagram Rx">
+                <figcaption>FigX. - Domain Diagram of RxJava</figcaption>
+              </figure>
+            </div>
+
+          </div>
+
+    <!---------------------OTHER SECTION--------------------->
+          <h2 id="sec2">Design Patterns</h2>
+          <hr>
+          <div class="row">
+            <div class="col-md-9">
+              <p>Based on the <i>Gang of Four</i> design patterns, we managed to find some of them used in RxJava. Starting with the most common pattern, in our opinion, we're describing the <b>Strategy Pattern.</b></p>
+              <ul>
+                <li>In RxJava:</li>
+                <figure>
+                  <img src="./img/StrategyRxJava.png" alt="Strategy Pattern Rx">
+                  <figcaption>FigX. - Diagram of Strategy Pattern in RxJava.</figcaption>
+                </figure>
+                <li>In <i>GoF:</i></li>
+                <figure>
+                  <img src="./img/StrategyGofRxJava.png" alt="Strategy Pattern GoF">
+                  <figcaption>FigX. - Diagram of Strategy Pattern by <i>GoF</i></figcaption>
+                </figure>
+              </ul>
+              <br>
+              <p>As for <b>Template Pattern</b>:</p>
+              <ul>
+                <li>In RxJava:</li>
+                <figure>
+                  <img src="./img/TemplateRxJava.png" alt="Template Pattern Rx">
+                  <figcaption>FigX. - Diagram of Template Pattern in RxJava</figcaption>
+                </figure>
+                <li>In <i>GoF:</i></li>
+                 <figure>
+                 <img src="./img/TemplateGoFRxJava.png" alt="Template Pattern GoF">
+                  <figcaption>FigX. - Diagram of Template Pattern by <i>GoF</i></figcaption>
+                 </figure>
+              </ul>
+              <p>As for <b>Singleton Pattern</b>:</p>
+              <ul>
+                <li>In RxJava:</li>
+                <figure>
+                  <img src="./img/SingletonPatternRxJava.png" alt="Singleton Pattern Rx">
+                  <figcaption>FigX. - Diagram of Singleton Pattern in RxJava</figcaption>
+                </figure>
+                <li>In <i>GoF:</i></li>
+                 <figure>
+                 <img src="./img/SingletonGofRxJava.png" alt="Template Pattern GoF">
+                  <figcaption>FigX. - Diagram of Singleton Pattern by <i>GoF</i></figcaption>
+                 </figure>
+              </ul>
+              <p>As for <b>Factory Pattern</b>:</p>
+              <p>We surmise this is a slightly different implementation of Factory Pattern though we think the concept is the same, thus making us believe this could represent a Factory Pattern.</p>
+              <ul>
+                <li>In RxJava:</li>
+                <figure>
+                  <img style="" src="./img/FactoryPatternRxJava.png" alt="Factory Pattern Rx">
+                  <figcaption>FigX. - Diagram of Factory Pattern in RxJava</figcaption>
+                </figure>
+                <li>In <i>GoF:</i></li>
+                 <figure>
+                  <img src="./img/FactoryMethodGofRxJava.png" alt="Template Pattern GoF">
+                  <figcaption>FigX. - Diagram of Factory Pattern by <i>GoF</i></figcaption>
+                 </figure>
+              </ul>
+            </div>
+
+          </div>
+        </div><!--/right-->
+      </div><!--/row-->
+    </div><!--/container-->
 
 
 
-<!-- script references -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!-- Add fancyBox -->
-<link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script src="js/scripts.js"></script>
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-</body>
-</html>
+    <!-- script references -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    </body>
+    </html>
