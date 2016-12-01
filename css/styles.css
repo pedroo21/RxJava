@@ -200,7 +200,12 @@ figure figcaption{
 }
 
 ol, ul{
-     margin: 20px 60px;
+    margin: 20px 60px;
+}
+
+.nav ol, .nav ul, .nav a{
+    margin: 0 auto;
+    width: 220px;
 }
 
 .glyphicon-lg{font-size:3em}
