@@ -57,7 +57,6 @@
             </li>
             <li class="tree">
               <a class="tree-toggle" href="javascript:;">Architectural Style <span class="caret"></span></a>
-
               <ul class="nav tree">
                 <li><a href="#sec11">Event-Based Systems</a></li>
                 <li><a href="#sec12">Filling in the Black</a></li>
@@ -67,10 +66,17 @@
             <li class="tree">
               <a class="tree-toggle" href="javascript:;">Design Patterns <span class="caret"></span></a>
               <ul class="nav tree">
-                <li><a href="#sec2">Subtitle</a></li>
-                <li><a href="#sec2">Package Organization</a></li>
+                <li><a href="#sec21">Design Patterns Overview</a></li>
               </ul>
             </li>
+            <li class="tree">
+              <a class="tree-toggle" href="javascript:;">4+1 Architectural View<span class="caret"></span></a>
+              <ul class="nav tree">
+                <li><a href="#sec31">Brief Description</a></li>
+                <li><a href="#sec32">UML Diagrams</a></li>
+                <ul><li><a href="#sec321">Deployment View</a></li></ul>
+              </ul>
+            </li>     
           </ul>
         </div><!--/left-->
 
@@ -242,7 +248,7 @@
           </div>
 
     <!---------------------OTHER SECTION--------------------->
-          <h2 id="sec2">Design Patterns</h2>
+          <h2 id="sec21">Design Patterns</h2>
           <hr>
           <div class="row">
             <div class="col-md-9">
@@ -301,12 +307,51 @@
                  </figure>
               </ul>
             </div>
+        </div>
 
-          </div>
+        <!---------------------OTHER SECTION--------------------->
+              <h2 id="sec31">4+1 Architectural View</h2>
+                <hr>
+                <h3 id="sec31">Description</h3>
+              <hr>
+              <div class="row">
+                <div class="col-md-9">
+                  <p>UML diagrams are useful design tools because they can provide different views of the
+                      system behavior which can be difficult to extract from specifications.</p>
+    <p>The 4+1 view offers a different perspective to classify and apply UML diagrams. The 4+1 view is essentially how a system can be viewed from a software life cycle perspective. Each of these views represents how a system can be modeled.</p>
+                    <p>These different views are:</p>
+                    <ul>
+                        <li>Design/Logical View: The design view of a system is the structural view of the system. This gives an idea of what a given system is made up of. Class diagrams and object diagrams form the design view of the system.</li>
+                    <li>Process View: The dynamic behavior of a system can be seen using the process view. The different diagrams such as the state diagram, activity diagram, sequence diagram, and collaboration diagram are used in this view.</li>
+                    <li>Component View: This view shows the grouped modules of a given system modeled using the component diagram.</li>
+                    <li>Deployment View: The deployment diagram of UML is used to identify the deployment modules for a given system.</li>   
+                 <li>Use case View: Finally, use case view. Use case UML diagrams are used to view a system from this perspective as a set of discrete activities or transactions.</li>
+                    </ul> 
+                <p>Next Figure demonstrates the different views of this "4+1 Architectural View".</p>
+                  <figure>
+                      <img src="./img/UML41_converted.png" alt="UML41" width="400" height="300">
+                      <figcaption>FigX. - 4+1 Architectural View.</figcaption>
+                     </figure>
+
+                  <p>In this context we developed the following UML diagrams for RxJava example.</p>
+
+                <hr>
+                <h3 id="sec32">UML Diagrams</h3>
+                    <hr>
+                    <h4 id="sec321">Deployment View</h4>
+                    <p>Below diagram illustrates an example of how a deployment diagram can be seen for RxJava.</p>
+                    <figure>
+                      <img src="./img/Deploy_RxJava.png" alt="Deploy" width="600" height="500">
+                      <figcaption>FigX. - Deployment Diagram for RxJava.</figcaption>
+                     </figure>
+                  </div>
+              </div>
+              
+              
+   <!----end----->           
         </div><!--/right-->
       </div><!--/row-->
     </div><!--/container-->
-
 
 
     <!-- script references -->
