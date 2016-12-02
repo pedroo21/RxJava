@@ -143,7 +143,7 @@
         <figcaption>Figure x - Diagram illustrating some important packages of RxJava.</figcaption>
         </figure>
 
-    <!---------------------OTHER SECTION--------------------->
+    <!---------------------OTHER SECTION-------------------- -->
 
           <h2 id="sec1">Architectural Style</h2><hr>
             <h3 id="sec11">Event Based Systems</h3>
@@ -251,7 +251,7 @@
 
           </div>
 
-    <!---------------------OTHER SECTION--------------------->
+    <!---------------------OTHER SECTION---------------------->
           <h2 id="sec21">Design Patterns</h2>
           <hr>
           <div class="row">
@@ -313,7 +313,7 @@
             </div>
         </div>
 
-        <!---------------------OTHER SECTION--------------------->
+        <!---------------------OTHER SECTION---------------------->
               <h2 id="sec31">4+1 Architectural View</h2>
                 <hr>
                 <h3 id="sec31">Description</h3>
@@ -350,7 +350,9 @@
                      </figure>
                     
                     <h4 id="sec322">Process View</h4>
-                    <p>.</p>
+                    <p>The basic activity flow of RX Java explains a basic interaction between an Observable object and a Subscriber (or a simple Observer).</p>
+                    <p>When a stream of data arrives, an Observable is created and that data is made available to all subscribers. The observer has no knowledge of how many subscribers are listening to the data flow. Through the <code>subscribe()</code> method, the Subscribers can reach the data flow, and possibly apply transformations to the data.</p>
+                    <p>The subscriber can unsubscribe to the data flow, and thus endind this process.</p>
                     <figure>
                       <img src="./img/Activity.png" alt="Activity" width="800" height="auto">
                       <figcaption>FigX. - Activity Diagram.</figcaption>
@@ -358,7 +360,9 @@
                     
                                         
                     <h4 id="sec323">Development View</h4>
-                    <p>.</p>
+                    <p>You can't talk about RX Java, or any kind of Reactive extention without talking about the Observable object, represented in the center of the Component Diagram shown below.</p>
+                    <p>An Observable can interact with any number of subscribers, that basicly listen to the data flow. The return value of the <code>subscribe()</code> is a Subscription. This object allows you to <code>unsubscribe()</code> to the published events.</p>
+                    <p>The pub-sub communication can also be mediated through a Produces, as to control the amount of data that is beeing published.</p>
                     <figure>
                       <img src="./img/Component.png" alt="Component" width="800" height="auto">
                       <figcaption>FigX. - Activity Diagram.</figcaption>
@@ -368,7 +372,7 @@
               </div>
               
               
-   <!----end----->           
+   <!----end------>           
         </div><!--/right-->
       </div><!--/row-->
     </div><!--/container-->
