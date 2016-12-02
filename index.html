@@ -143,7 +143,7 @@
         <figcaption>Figure x - Diagram illustrating some important packages of RxJava.</figcaption>
         </figure>
 
-    <!---------------------OTHER SECTION--------------------->
+    <!---------------------OTHER SECTION---------------------->
 
           <h2 id="sec1">Architectural Style</h2><hr>
             <h3 id="sec11">Event Based Systems</h3>
@@ -251,7 +251,7 @@
 
           </div>
 
-    <!---------------------OTHER SECTION--------------------->
+    <!---------------------OTHER SECTION---------------------->
           <h2 id="sec21">Design Patterns</h2>
           <hr>
           <div class="row">
@@ -313,7 +313,7 @@
             </div>
         </div>
 
-        <!---------------------OTHER SECTION--------------------->
+        <!---------------------OTHER SECTION---------------------->
               <h2 id="sec31">4+1 Architectural View</h2>
                 <hr>
                 <h3 id="sec31">Description</h3>
@@ -341,7 +341,25 @@
 
                 <hr>
                 <h3 id="sec32">UML Diagrams</h3>
+                    <hr>  
+                    <h4 id="sec321">Logical View</h4>
+                    <p>The following diagram shows the core classes of RxJava. There could be a lot more classes though they are only fancy features that make RxJava a really great asynchronous stream library.</p>
+                    <p>An Observable is what has the data while a Subscriber, which is a specialization of an Observer, is the consumer. This connection between them is a Subscription.</p>
                     <hr>
+                    <figure>
+                      <img src="./img/classDiagramRxJava.jpg" alt="Class" width="600" height="500">
+                      <figcaption>FigX. - Class Diagram for RxJava core.</figcaption>
+                    </figure>
+                    <hr>
+                    <p>This sequence diagram shows what would be a developer's brief perspective while implementing RxJava in his software.</p>
+                    <p>After creating an Observable and a Subscriber all he has to do is subscribe the Subscriber object to the Observable object.
+                       Then, magically (by triggering events), RxJava takes care of sending data from the Observable to its Subscribers, while he has data.</p>
+                    <hr>
+                    <figure>
+                      <img src="./img/sequenceDiagramRxJava.jpg" alt="Sequence" width="600" height="500">
+                      <figcaption>FigX. - Sequence Diagram for RxJava core.</figcaption>
+                    </figure>
+                    
                     <h4 id="sec321">Physical View</h4>
                     <p>Below diagram illustrates an example of how a deployment diagram can be seen for RxJava.</p>
                     <figure>
