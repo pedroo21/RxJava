@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>RXJAVA - Soundcloud</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="index.html">Made with &hearts; <span>in FEUP</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+				
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>How Soundcloud used RXJava in Android</h1>
+						<p>
+							Since at Soundcloud everything moves around tracks, they need a lot of effort to download tracks' metadata.
+							In order to enhance their performance doing such, they need to rely, heavily, on event-based & asynchronous operations.
+						</p>
+						<p>Why did they use <i>Reactive Extensions?</i></p>
+						<p>We present a brief and straight to the point explanation.</p>
+					</header>
+					<a href="#main" class="button big scrolly">Learn More</a>
+				</div>
+			</section>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper style1" style="background-color: #ff5900">
+						<div class="inner">
+							<!-- 2 Columns -->
+								<div class="flex flex-2">
+									<div class="col col1">
+										<div class="image round fit">
+											<a class="link"><img src="img/soundcloud.jpg" alt="" /></a>
+										</div>
+									</div>
+									<div class="col col2">
+										<h3>So, who is Souncloud?</h3>
+										<p>
+											Founded in Stockholm, but established in Berlin, Soundcloud is an audio distribution platform.
+											It enables their users to upload, record, share and promote their original songs.   
+										</p>
+										<p>
+											Beginning with an idea of sharing tracks, much like we share videos on <i>Vimeo</i>, for example,
+											instead of sending them via private way, it rapidly grew becoming the most used audio platform.
+											Nowaday, it counts with 1900+ workers and a registered user base of 40 million.
+										</p>
+									</div>
+								</div>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section class="wrapper style2">
+						<div class="inner">
+							<div class="flex flex-2">
+								<div class="">
+									<h3>Concurrency in Android</h3>
+                                    <p>
+										Soundcloud has to deal with a lot of concurrent API calls. Based on 2013 data, it has to manage 12 hours of audio added every minute,
+										try to reach 200 million of users per month, more than 14 million app downloads. Today, this numbers are even bigger.
+									</p>
+									<p>
+										In depth, the Android app must do a lot of tasks, in background, since, natively, it can't block UI thread.
+										We're talking about network calls, UI calls, and a lot of other things that you can think of.
+									</p>
+									<p>
+										If you are to implement this, by hand, then you'd probably come up with spaghetti code, meaning, you'd have 
+										a ton of nested AsyncTasks, inline threads or none at all and probably a galore of custom callbacks.
+									</p>
+									<p>
+										So, Soundcloud decided to streamline their event handling, embrace concurrency and, more important, <b>unify the event model</b>.
+										Which tecnhology does this better, they thought. RxJava came up!
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section class="wrapper style1" style="background-color: #ff5900">
+						<div class="inner">
+							<header class="align-center">
+								<h2>Explaining the Problem</h2>
+								<p>Let's sum this up. Why did a growing digital business like Soundcloud need to find a better architecture?</p>
+							</header>
+							<div class="flex flex-3">
+								<div class="col align-center">
+									<div class="image fit" style="border: solid 10px black !important; box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px 0px rgba(0, 0, 0, 0.1) !important">
+										<img src="img/soundcloudProblems.png" alt="" />
+									</div>
+									<p>As you can see, there are a lot of variables to work with, while developing an Android app. How you manage them is, probably, the key to success.</p>
+								</div>
+								<div class="col align-center">
+									<div class="image fit" style="border: solid 10px black !important; box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px 0px rgba(0, 0, 0, 0.1) !important">
+										<img src="img/progToday.png" alt="" />
+									</div>
+									<p>
+										Performing asynchronously is a must-have feature, so our programming style should reflect it.
+										Souncloud team knew that and decided to go with RxJava so they could solve the problem in a scalable way.
+									</p>
+								</div>
+								<div class="col align-center">
+									<div class="image fit" style="border: solid 10px black !important; box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px 0px rgba(0, 0, 0, 0.1) !important">
+										<img src="img/rxcons.png" alt="" />
+									</div>
+									<p>
+										Though, there are not silver bullets in software engineering.
+										You'll always have to analyse the pros & cons of the used techology.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+                
+                <!-- Section -->
+					<section class="wrapper style2">
+						<div class="inner">
+							<div class="flex flex-2">
+								<div class="col col2">
+									<h3>Enter RX</h3>
+                                    <p>
+										The concept here is the same as Netflix, so please click <a href="">here</a>. It will lead you there.
+									</p>
+								</div>
+                                <div class="col col1">
+                                    <div class="image round fit">
+										<a class="link"><img src="img/soundcloud2.png" alt="" /></a>
+									</div>
+                                </div>
+							</div>
+						</div>
+					</section>
+					<section class="wrapper style1" style="background-color: #ff5900">
+						<div class="inner">
+							<!-- 2 Columns -->
+								<div class="flex flex-2">
+
+									<div class="">
+										<h3>Conclusion</h3>
+										<ul>
+											<li>Using RxJava, Soundcloud development team could abstract from asynchronous behaviour implementation.</li>
+											<li>This level of abstraction improves code mantainability, as well as performance and scalability.</li>
+											<li>Multiple soundcloud teams could develop the services as they see fit, since their API is exposed as an <code>Observable(T)</code>. This means it will always work with the set type</li>											
+										</ul>
+									</div>
+								</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-github"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-home"><span class="label">Facebook</span></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/jquery.scrolly.min.js"></script>
+			<script src="js/jquery.scrollex.min.js"></script>
+			<script src="js/skel.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+
+	</body>
+</html>
