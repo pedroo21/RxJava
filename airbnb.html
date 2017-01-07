@@ -1,0 +1,191 @@
+<!DOCTYPE HTML>
+<!--
+	Urban by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>RXJAVA - Airbnb</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="css/main_airbnb.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="logo"><a href="index.html">Made with &hearts; <span>in FEUP</span></a></div>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="/RxJava/index.html">Home</a></li>
+                    <li><a href="/RxJava/index.html">Netfix</a></li>
+					<li><a href="/RxJava/airbnb.html">AirBNB</a></li>
+					<li><a href="/RxJava/soundcloud.html">Soudcloud</a></li>
+                    <li><a href="/RxJava/github.html">Github</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<header>
+						<h1>How Airbnb used RxJava to Scale</h1>
+						<p>Let's take a look over Airbnb's experience adopting RxJava into mobile engineering, considering their implementation difficulties and lessons learned along the way.
+						</p>
+					</header>
+					<a href="#main" class="button big scrolly">Learn More</a>
+				</div>
+			</section>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<!-- 2 Columns -->
+								<div class="flex flex-2">
+									<div class="col col1">
+										<div class="image round fit">
+											<a class="link"><img src="img/airbnb_logo.png" alt=""/></a>
+										</div>
+									</div>
+									<div class="col col2">
+										<h3>So, what is Airbnb?</h3>
+										<p>Founded in August 2008 and headquartered in San Francisco, California, Airbnb is a community marketplace for people to advertise, discover and book accommodations around the world, whether through a computer, a mobile phone or a tablet.</p>
+                                        <p>It is available in 192 countries, connecting different travellers that can access it anytime, anywhere, that's why Airbnb mobile application is so important. Created in 2013, Airbnb app is available for iOs and Android.</p>
+									</div>
+								</div>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section class="wrapper style2">
+						<div class="inner">
+							<div class="flex flex-2">
+								<div class="">
+									<h3>Why use RxJava?</h3>
+                                                <p>We all know that mobile engineering is hard. Mobile users expect an instant response to everything, and there’s also the need to switch back and forth between different threads. There is the main thread, you need to make network calls, and you need to make different things that happen in the background. On top of that, you cannot block the UI thread.</p>
+                                                <p>RxJava is a good candidate for solving it because it is easy to switch back and forth between threads. It is built right into the framework. Async can be very cumbersome and error-prone, and RxJava is one reason we you do not need to do that anymore, and why you can compose different tasks together.</p>
+                                                <p>The real reason for Airbnb to implement RxJava? Because as they say <i>"We make shitty software. Why do we have so many bugs? Why do we need crash reporting tools that track how many hundreds of thousands of crashes we had, or how many users are mad at us? Something must be wrong".</i></p>
+                                    <p>They were in a need of a change. As Felipe Lima, Software Engineer at Airbnb, said: <i>"I think imperative programming is not the way we should be doing this. Of course, object-oriented programming has been around for many years. That’s built into our core as modern programmers. Everyone does this with eyes closed, but it isn’t necessarily the way we should be doing software".</i></p>
+                                                <p>Functional programming is the concept behind RxJava, and it is one way you can achieve more solid code that does not keep state around forever. The code is more reliable and you know that works.</p>
+                                                <p>The main problem is that we write bad code and mobile engineering is hard, and this is one way of tackling that problem.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+				<!-- Section -->
+					<section class="wrapper style1">
+						<div class="inner">
+							<header class="align-center">
+								<h2>Showing some examples</h2>
+								<p>
+                                </p>
+							</header>
+							<div class="flex flex-3">
+								<div class="col align-center">
+									<div class="image fit" style="border: solid 2px black !important; box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px 0px rgba(0, 0, 0, 0.05) !important">
+										<img src="img/observe.JPG" alt="" />
+									</div>
+                                    <b>Observing</b>
+									<p>When using RxJava, you are building a stream.
+                                        If you do not call <code>observeOn()</code>, everything’s going to run the same thread that is subscribed to the observable. Here, we have subscribe, so if this is called from the main thread, everything will happen from the main thread regardless of what you are doing. So, <code>observeOn()</code> is effectively a way of offloading that work to a different thread, and that’s going to make it asynchronous.</p>
+								</div>
+								<div class="col align-center">
+									<div class="image fit" style="border: solid 2px black !important; box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px 0px rgba(0, 0, 0, 0.05) !important">
+										<img src="img/subscribe.JPG" alt="" />
+									</div>
+                                    <b>Subscribing</b>
+									<p>Change the thread that the observable is subscribed to. First, the observable is created affecting <code>subscribeOn()</code>. Then, you have the code that runs upon subscription, the code that runs when you subscribe to it, and all the other mutations on that stream. This changes where the subscription code runs into, not the rest. It doesn’t matter when you call it, it only changes the thread where the subscription is executed.</p>
+								</div>
+								<div class="col align-center">
+									<div class="image fit" style="border: solid 2px black !important; box-shadow: 0px 0px 0px 0px #fff, 0px 0px 0px 0px rgba(0, 0, 0, 0.05) !important">
+										<img src="img/memory.JPG" alt="" />
+									</div>
+                                    <b>Memory Leaks</b>
+									<p><code>CompositeSubscription</code> Class that can group multiple subscriptions together, and then you just add the subscription to it. Then, whenever you destroy the activity, you just clear it out.</p>
+								</div>
+							</div>
+						</div>
+					</section>
+                
+                <!-- Section -->
+					<section class="wrapper style2">
+						<div class="inner">
+							<div class="flex flex-2">
+								<div class="col col2">
+									<h3>RxGroups</h3>
+                                        <p>RxGroups lets you group RxJava Observables together in groups and tie them to your Android lifecycle. This is especially useful when used with Retrofit (Retrofit turns your HTTP API into a Java interface).</p>
+                                        <p>For simple scenarios you can probably just let the original request be cancelled and fire a new one. However it is easy to see how this becomes a problem in more complex situations.</p>
+                                        <p>Let’s say the user is submitting a payment. You will probably want to to guarantee that you can reattach to the same in-flight or completed request after rotating the screen or leaving the Activity and returning later.</p>
+                                        <p>RxGroups will also automatically prevent events from being delivered to your Activity or Fragment before <code>onResume()</code> and after <code>onPause()</code>. If that happens, they will be automatically cached in memory and delivered once the user returns to your screen. If they never return, the memory is then reclaimed automatically after <code>onDestroy()</code>.</p>
+								</div>
+                                <div class="col col1">
+                                    <div class="image round fit">
+										<a class="link"><img src="img/rxgroups.JPG" alt="" /></a>
+									</div>
+                                </div>
+							</div>
+						</div>
+					</section>
+					<section class="wrapper style1">
+						<div class="inner">
+							<!-- 2 Columns -->
+								<div class="flex flex-2">
+									<div class="">
+                                            <h3>Where Airbnb uses RxJava?</h3>
+                                            <p>They are using it around the network layer, not exposing it to the UI, because that is a much bigger bet. The need of getting everyone on board and the knowledge thing comes into play, because if you expose that to your activity layer or your views, then it means that everyone literally has to understand it to use it.</p>
+                                            <p>In the network layer, fewer people have tits perception, so you do not have to have everyone understand what is going there.</p>
+                                            <p>They just expose an API, and it works. It is like a bridge where we use RxJava on one end, and on the other side it is like normal land. It is kind of limited use, even though it’s a core part of the app.</p>
+                                            <p>UI layers does not know anything about it. It just have listeners, and only it cares about callback.</p>
+									</div>
+								</div>
+						</div>
+					</section>
+                <section class="wrapper style2">
+						<div class="inner">
+							<div class="flex flex-2">
+								<div class="col col2">
+									<h3>Summarizing it</h3>
+                                   <p>Overall, the biggest challenge for Airbnb migrating to RxJava was getting everyone up to speed, learning it and understanding it. But it was worth it? It still is a big one but it worth it. You get more benefit once you start to use it more: combine streams, mutate them, etc. With a little piece of code you can achieve a lot, does wonders for you, and it’s really amazing.</p>
+								</div>
+                                <div class="col col1">
+                                    <div class="image round fit">
+										<a class="link"><img src="img/logo.jpg" alt="" /></a>
+									</div>
+                                </div>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="copyright">
+					<ul class="icons">
+					<ul class="icons">
+						<li><a href="https://github.com/pedroo21/RxJava" class="icon fa-github"><span class="label">Git</span></a></li>
+						<li><a href="/RxJava/index.html" class="icon fa-home"><span class="label">Home</span></a></li>
+					</ul>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
