@@ -3634,6 +3634,12 @@
 						border-top: 0 !important;
 					}
 
+					#menu > ul.links > li.active {
+				        border-top: solid 1px #B9090B;
+                        border-bottom: solid 1px #B9090B;
+					}
+
+
 		#menu .close {
 			text-decoration: none;
 			-moz-transition: color 0.2s ease-in-out;
