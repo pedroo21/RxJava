@@ -136,6 +136,10 @@
 		border-bottom: dotted 1px;
 	}
 
+.no-border{
+    border-bottom: none !important;
+}
+
 		a:hover {
 			border-bottom-color: transparent;
 		}
